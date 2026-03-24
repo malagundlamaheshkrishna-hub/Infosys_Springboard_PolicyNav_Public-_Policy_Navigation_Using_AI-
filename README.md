@@ -1,341 +1,219 @@
-
-# Infosys_SpringBoard_Public_Policy_Navigation
-# Infosys_Springboard_PolicyNav_Public-_Policy_Navigation_Using_AI
-# 🧠 PolicyNav
-AI-Powered Policy Document Analysis & Navigation System  
-Transforming complex policy documents into actionable insights using AI.
-##Quick Links
-
-| Category          | Link                                 |
-| ----------------- | ------------------------------------ |
-| 📽️ Demo Video    | [Video Link](https://drive.google.com/file/d/1mbPmmrhLD5Z8etwEr7z8v-OQ9IUnaCUi/view?usp=sharing)                         |
-| 🧩 Source Code    | This Repository                      |
-| 🧠 AI Models      | Qwen · Sentence Transformers · FAISS |
-
-## 📌 Table of Contents
-
-- About the Project  
-- Problem Statement & Motivation  
-- Key Features  
-- Architecture  
-- Tech Stack  
-- Models Used  
-- Project Structure  
-- Installation & Setup  
-- Usage Guide  
-- Admin Controls  
-- Datasets & Evaluation  
-- Screenshots  
-- Roadmap  
-- Team  
-- License  
-
-
-
-## 📖 About the Project
-
-**PolicyNav** is an AI-powered system designed to simplify the exploration and understanding of complex policy documents using modern NLP techniques and Retrieval-Augmented Generation (RAG).
-
-It enables users to:
-- Search across large document collections intelligently  
-- Generate contextual answers using AI  
-- Visualize relationships via knowledge graphs  
-- Summarize lengthy documents  
-- Analyze readability of content  
-
-📌 Built as part of **Infosys Springboard Internship Final Project**  
-📌 Target users: Common persons, Researchers, policy analysts, students, government professionals  
-
-
-
-## 🎯 Problem Statement & Motivation
-
-## 📄 Problem & Solution
-
-**Problem:**  
-Public policy documents are often lengthy, complex, and difficult to understand due to technical language, making it challenging for users to quickly find relevant information. There is a lack of intelligent systems that enable easy search, summarization, and question-answering over such documents. This results in poor accessibility, time-consuming analysis, and potential misinterpretation of policies.
-
-**Solution:**  
-Our AI-powered system helps to:
-- Extract meaningful insights instantly  
-- Enable semantic search across documents  
-- Visualize relationships between entities  
-- Simplify and summarize complex content
-
-
-
-## 🚀 Key Features
-
-## 👤 User Features
-
-- 🔐 **Secure Authentication** – JWT-based login & registration  
-- 🔎 **RAG Search** – AI-powered semantic search using FAISS  
-- 📊 **Readability Analyzer** – Flesch, Gunning Fog, and SMOG metrics  
-- 🧠 **Document Summarization** – Transformer-based summarization  
-- 🌐 **Knowledge Graph** – Entity relationship visualization  
-- 🕘 **Query History** – Track previous searches & outputs  
-- 📈 **Dashboard** – Interactive analytics & insights  
-
-## 🌐 Multilingual Support
-
-PolicyNav uses Facebook's **NLLB-200** (No Language Left Behind) model for high-quality, bi-directional translation. Your question is first translated to English for FAISS search, then the AI answer is translated back to your chosen language.
-
-| **Language** | **NLLB-200 Code** |
-|---|---|
-| English | `eng_Latn` |
-| Hindi | `hin_Deva` |
-| Tamil | `tam_Taml` |
-| Telugu | `tel_Telu` |
-| Kannada | `kan_Knda` |
-| Marathi | `mar_Deva` |
-| Bengali | `ben_Beng` |
-
-
-### 🛠 Admin-only Features
-
-- Secure admin access  
-- Upload and manage policy documents  
-- Monitor system usage  
-- View user activity and search logs  
-- Manage document indexing and vector store  
-
-
-
-## 🧩 Architecture
-
-Monolithic AI system integrating NLP pipelines, vector search, and visualization tools.
-## 🧩 Architecture Diagram
-
+<!-- Banner / Background Style -->
 <p align="center">
-  <img src="architecture.png" width="900"/>
-  <br/>
-  <em>Figure: End-to-end system architecture of PolicyNav</em>
+  <img src="https://img.shields.io/badge/AI%20Project-PolicyNav-blueviolet?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Domain-Public%20Policy-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Built%20With-Python%20%7C%20AI%20%7C%20NLP-success?style=for-the-badge"/>
 </p>
 
-
-
-## 🗄 Database Schema
-
+<h1 align="center"> PolicyNav AI</h1>
 <p align="center">
-  <img src="database_schema.png" width="900"/>
-  <br/>
-  <em>Figure: Entity Relationship Diagram (ERD) of the system database</em>
+AI-Powered Public Policy Navigation & Analysis System  
+<br/>
+Transforming complex policy documents into simple, actionable insights 🚀
 </p>
 
+---
 
+##  Project Overview
 
-## 🛠 Tech Stack
+PolicyNav is a secure, multilingual AI platform designed to help organizations understand and navigate complex enterprise documents. It works entirely offline to protect sensitive data and uses Retrieval-Augmented Generation (RAG) with a FAISS vector database and a HuggingFace language model to answer queries, summarize documents, and simplify policies. The system also generates 3D knowledge graphs, performs document readability analysis, and supports real-time translation across multiple languages. Security is strengthened through password hashing, credential monitoring, and email-based two-factor authentication. With a modern interactive web interface, PolicyNav combines advanced AI, strong cybersecurity, and user-friendly design to provide an enterprise-ready document intelligence platform.
 
-- 🎨 **Frontend:** Streamlit  
-- ⚙️ **Backend:** Python  
-- 🤖 **NLP Models:** Hugging Face Transformers  
-- 🔍 **Vector Search:** FAISS  
-- 🗄️ **Database:** SQLite  
-- 🔐 **Security:** JWT, bcrypt  
-- 📊 **Visualization:** Plotly, PyVis  
-- 🧠 **NLP:** spaCy  
 
 
-## 🤖 Models Used
+ It helps users:
+ 
+-Instant Policy Retrieval 
+-Automated Multi-lingual Localization
+-Visual Relationship Mapping
+-Regulatory Readability Assessment
+-Highly Secure Offline Intelligence
+-Deep Document Summarization 
 
-| Model / Tool | Purpose | Framework |
-|-------------|--------|----------|
-| Sentence Transformers | Text embeddings for semantic search | 🤗 Transformers |
-| FAISS | Vector similarity search (RAG retrieval) | Facebook AI |
-| Qwen2.5 | Answer generation (LLM) | Transformers |
-| spaCy | Named Entity Recognition | spaCy |
-| TextStat | Readability scoring | Python |
+---
 
-| Model / Tool | One-line Description |
-|-------------|--------------------|
-| Sentence Transformers | Converts text into dense vector embeddings for semantic understanding |
-| FAISS | Performs fast similarity search on vector embeddings for retrieval |
-| Qwen2.5 | Generates context-aware answers using large language modeling |
-| spaCy | Extracts named entities and linguistic features from text |
-| TextStat | Calculates readability scores to evaluate text complexity |
-## ⚙️ Installation & Setup
+##  Why This Project?
 
-### Prerequisites
-- Python 3.10+
-- Git  
-- (Optional) GPU support  
+ Public policy documents are:
+- Written in dense, highly technical legal language
+- Difficult to visualize or map out connections between different entities and rules
+- Often inaccessible to non-English speakers
+- Too confidential or risky to upload to public cloud AI tools for analysis  
 
+ **PolicyNav solves this by:**
+- Quantifying document complexity with linguistic readability grading
+- Translating queries and providing answers natively across multiple languages
+- Generating interactive 3D visual maps of entity relationships
+- Executing 100% offline to guarantee absolute enterprise data privacy
+- Protecting access with military-grade authentication and security constraints  
 
+---
 
-### 🧑‍💻 Local Setup
+##  Key Highlights
 
-```bash
-git clone <repository-link>
-cd PolicyNav
-pip install -r requirements.txt
-```
-## 🔐 Configuration & Environment Setup
+###  Core Features
+-  **Semantic Search (RAG)** – Context-aware document search
+-  **AI Summarization** – Converts long documents into 3 key points
+-  **Readability Analysis** – Measures text complexity and reading levels
+-  **3D Knowledge Graph** – Visualizes direct connections between words and ideas
+-  **Multilingual Support** – Natively translates queries and answers across multiple Indian and global languages
+-  **Interactive Dashboard** – Premium, easy-to-use visual insights and analytics
+-  **History Tracking** – Automatically saves previous queries and AI answers
+-  **Enterprise Security** – Strong password constraints and live Email OTP verification
+-  **100% Offline AI Execution** – Runs completely locally to ensure your confidential data stays totally private
+-  **Profile Settings Hub** – Manage your personal details, custom avatars, and light/dark themes
 
-To securely run the application (especially in Google Colab), you need to configure environment variables using **Ngrok** and **Gmail App Passwords**.
 
+---
 
+##  Multilingual Intelligence
 
-### 🌐 Ngrok Setup (for Public URL)
+Supports multiple languages using **NLLB-200 Model**:
+**Indian Regional Languages:**
 
-Ngrok is used to expose your Streamlit app running in Colab to the internet.
+- Hindi
+- Tamil
+- Telugu
+- Kannada
+- Marathi
+- Bengali
+- Gujarati
+- Malayalam
+- Punjabi
+- Urdu
 
-#### Steps to Get Ngrok Auth Token:
+**Global Languages:**
 
-1. Visit: https://ngrok.com/  
-2. Create a free account and log in  
-3. Go to the **Dashboard**  
-4. Copy your **Authtoken**
+- English (Default)
+- Spanish
+- French
+- German
+- Arabic
 
+ Enables inclusive access for users across regions.
 
+---
 
-### 🔑 Add Ngrok Secret in Google Colab
+## System Architecture
 
-1. Open your notebook in **Google Colab**  
-2. Click the **🔐 Secrets (key icon)** in the left sidebar  
-3. Click **“Add new secret”**  
-4. Enter:
+- NLP Pipeline  
+- Vector Database (FAISS)  
+- LLM (Qwen2.5)  
+- Knowledge Graph Engine  
 
-| Key | Value |
-|--||
-| `NGROK_AUTH_TOKEN` | Your copied ngrok token |
+ Integrated into a unified AI system for real-time processing.
 
-5. Save and enable access
+---
 
+##  Tech Stack
 
+| Layer | Technology |
+|------|----------|
+|  Frontend | Streamlit |
+|  Backend | Python |
+|  AI Models | Transformers |
+|  Search | FAISS |
+|  Database | SQLite |
+|  Visualization | Plotly, PyVis |
 
-### 📧 Gmail App Password Setup
+---
 
-Used for sending emails (OTP, verification, alerts).
+##  AI Models Used
 
-#### Steps to Generate App Password:
+- Sentence Transformers → Text Embeddings  
+- FAISS → Fast Retrieval  
+- Qwen2.5 → Answer Generation  
+- spaCy → Entity Recognition  
+- TextStat → Readability Metrics  
 
-1. Go to **Google Account → Security**  
-2. Enable **2-Step Verification** (required)  
-3. Search for **App Passwords**  
-4. Select app type (e.g., *Mail*)  
-5. Generate password  
-6. Copy the **16-digit password immediately**
+---
 
-⚠️ Important:
-- Do NOT use your normal Gmail password  
-- You cannot view this password again after closing  
+##  Advanced Capabilities
 
+ **AI Summary Isolation**
+- Compresses large 3000+ word documents into **3 precise bullet insights**
+- Maintains meaning while reducing complexity
 
+ **Global Expansion**
+- Real-time translation of queries & responses  
+- Supports regional accessibility  
 
-### 🔑 Add Gmail Secrets in Colab
+ **Smart Knowledge Graph**
+- Visualizes relationships between entities  
+- Helps users understand policy connections  
 
-Add the following secrets:
+ **Data Export & Reporting**
+- Export results as CSV reports  
+- Useful for research & analysis  
 
-| Key | Value |
-|--||
-| `EMAIL_ID` | Your Gmail address |
-| `EMAIL_APP_PASSWORD` | 16-digit app password |
+---
 
+##  Admin Features
 
+- Document upload & management  
+- User activity tracking  
+- System monitoring  
+- Vector database control
+- 
 
-### 📦 Final Environment Variables
+---
 
-Your configuration should include:
+##  Screenshots
 
-```env
-NGROK_AUTH_TOKEN=your_ngrok_token
-JWT_SECRET_KEY=your_secret_key
-EMAIL_ID=your_email@gmail.com
-EMAIL_APP_PASSWORD=your_app_password
-```
+| Feature | Preview |
+|--------|--------|
+| Dashboard | <img width="1913" height="868" alt="image" src="https://github.com/user-attachments/assets/3ce1ea6f-8e0e-4efd-b3d5-ab069b4e9770" />
+| Chat | <img width="1892" height="782" alt="image" src="https://github.com/user-attachments/assets/12fc3b43-b89f-4c5c-baa3-5a72642cc7ba" /> 
+| Readability Analyzer | <img width="1900" height="560" alt="image" src="https://github.com/user-attachments/assets/80dbb918-747b-4bf4-bddc-dae19f77db6d" /> <img width="1889" height="858" alt="image" src="https://github.com/user-attachments/assets/2ecefb39-ddd8-4dde-a07a-87420515404f" />
+| RAG Search | <img width="1906" height="864" alt="image" src="https://github.com/user-attachments/assets/ec080582-e0b2-43dc-833c-6aaf60c340dc" />
+| Knowledge Graph | <img width="1586" height="752" alt="image" src="https://github.com/user-attachments/assets/f89a414d-76e6-4f20-a32b-6c82b941ab09" />
+| Summarize |  <img width="1907" height="864" alt="image" src="https://github.com/user-attachments/assets/5dc0760d-486a-40ba-920d-5ac3dc31476a" />
+| Settings | <img width="1907" height="862" alt="image" src="https://github.com/user-attachments/assets/1d9e3155-0aff-49fb-ad96-fc87af1cb180" />
+| Admin Dashboard | <img width="1897" height="766" alt="image" src="https://github.com/user-attachments/assets/99a80748-8d40-4952-821c-7481e7f34233" /> <img width="1898" height="788" alt="image" src="https://github.com/user-attachments/assets/df3e3ad8-8237-4777-b3b8-75e7f4acbff5" /> <img width="1898" height="658" alt="image" src="https://github.com/user-attachments/assets/2334b9a7-267d-49ae-ba77-a5b571b50b4e" /> <img width="1889" height="705" alt="image" src="https://github.com/user-attachments/assets/29d9301c-8964-46ad-988e-43ca2f0d8e12" /> <img width="1899" height="790" alt="image" src="https://github.com/user-attachments/assets/ccc1265a-6994-467c-b876-abb100f25021" /> <img width="1901" height="856" alt="image" src="https://github.com/user-attachments/assets/c4a9a221-8396-4f80-a417-7f03b4e319c1" /> <img width="1900" height="651" alt="image" src="https://github.com/user-attachments/assets/98cefc12-2034-41a2-a54e-16ac4441bfa9" />
+| Project Architecture | <img width="1600" height="872" alt="image" src="https://github.com/user-attachments/assets/d52e7465-1596-469f-9390-a4490489b87b" />
 
-## 📝 Usage Guide
 
-1️⃣ **Register / Login** — Create an account with email, username, and a strong password (min. 8 chars, uppercase + number required)
+---
 
-2️⃣ **Select a Feature** from the sidebar — RAG Search, Summarization, Knowledge Graph, Readability Analyzer, or History
+##  Team
 
-3️⃣ **RAG Search** — Type your policy question in any supported language. Choose output language and optionally enable **Simplify Jargon** mode. The AI searches the vector DB and translates the answer back.
+| Name | Role |
+|------|------|
+| Malagundla Mahesh Krishna | UI & Dashboard |
+| G Arun Kumar | Reports & Export |
+| Mansi Chaturvedi | Knowledge Graph |
+| Bhaveena P | Summarization |
+| Samuel Dharshi N | RAG Search |
+| Ram Prakash S | History Module |
 
-4️⃣ **Summarizer** — Upload a policy PDF or paste text, select output language, and get a 3-bullet summary. Use the Q&A box to ask follow-up questions from the same document.
+---
 
-5️⃣ **Knowledge Graph** — Click **Render Interactive Topology** to generate a live force-directed entity graph from all ingested documents. Hover nodes for details.
+##  Unique Selling Points
 
-6️⃣ **Readability Analyzer** — Enter text or upload a PDF/TXT. View 5 readability gauges, grade level classification (Beginner / Intermediate / Advanced / Expert), and detailed text statistics.
+✔ Combines **RAG + NLP + Knowledge Graph**  
+✔ Supports **multilingual interaction**  
+✔ Designed for **real-world policy usage**  
+✔ User-friendly interface for non-technical users  
 
-7️⃣ **Profile** — Manage your avatar, change email (OTP-verified), update password (with history check), and configure app settings.
+---
 
-8️⃣ **Feedback** — Submit a 5-star rating and optional comment after using any feature.
+##  Future Enhancements
 
-📌 *Screenshots included below 👇*
+-  Mobile application  
+-  Cloud deployment  
+-  More advanced LLM integration  
+-  Real-time policy updates  
+-  Voice-based interaction  
 
+---
 
-## 📊 Datasets & Evaluation
+##  One-Line Summary
 
-### 📁 Datasets Used
+ *"PolicyNav transforms complex policy documents into simple, intelligent, and accessible insights using AI."*
 
-| Dataset | Usage |
-|--------|------|
-| Policy Documents (Custom) | RAG search corpus |
-| Government Reports | Real-world testing |
-| Web Scraped Docs | Knowledge graph generation |
+---
 
+##  Thank You
 
-### 📈 Evaluation Metrics
+**Thank you for exploring PolicyNav!**
 
-- Semantic relevance (**RAG accuracy**)  
-- Response quality (**LLM output**)  
-- Readability score improvements  
-- Knowledge graph completeness  
-
-
-## 📸 Screenshots
-
-### 📊 Dashboard
-![Dashboard](images/dashboard.png)
-
-
-
-### 🔎 RAG Search
-![RAG Search](images/rag_search.png)
-
-
-
-### 🌐 Knowledge Graph
-![Knowledge Graph](images/knowledge_graph.png)
-
-
-
-### 🕘 History
-![History](images/history.png)
-
-
-
-### 🛠 Admin Panel
-![Admin](images/admin.png)
-
-
-
-### 🧠 Summarization
-![Summarization](images/summarization.png)
-
-
-
-
-
-## Mentor
-Mohamedsipli M
-## 👥 Team
-
-| Name | Responsibilities |
-|-------|----------------|
-|Malagundla Mahesh Krishna  |  Admin dashboard, Data Visualization, Overall User Interface |
-| G Arun Kumar |Reports & CSV downloads|
-| Mansi Chaturvedi| knowledge graph, Docker, Analytics  |
-| Bhaveena P|  Summarisation tab, Authentication  |
-| Samuel Dharshi N |rag search, Charts & insights |
-| Ram Prakash S | History tab, setup & Working |
-
-
-
-
-
-## 📜 License
-
-🆓 **MIT License**  
-Free to use, modify, and distribute with attribution.
+We aim to make policy understanding **easy, accessible, and intelligent for everyone.**
